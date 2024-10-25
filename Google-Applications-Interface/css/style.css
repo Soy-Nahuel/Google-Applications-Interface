@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header img {
+    width: 35px;
+    height: 35px;
+}
+
+#menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -300px;
+    z-index: 10;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 350px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+#image-menu {
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+#menu figure {
+    text-align: center;
+    margin: 0;
+}
+
+#menu figure img {
+    width: 50px;
+    height: 50px;
+}
+
+#menu hr {
+    grid-column: 1 / -1;
+    width: 100%;
+    border: 1px solid #444;
+}
+
+#menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+#menu ul li:hover {
+    background-color: #333;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.search {
+    position: relative;
+}
+
+.search input {
+    border-radius: 30px;
+    padding: 10px 10px 10px 40px;
+    width: 300px;
+    font-size: 16px;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.search span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.magnifier {
+    background-image: url('../img/magnifying-glass-icon.png');
+    cursor: pointer;
+}
+
+.change-background {
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.change-background img {
+    width: 35px;
+    height: 35px;
+}
+
+#image {
+    display: none;
+}
